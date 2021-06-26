@@ -20,5 +20,7 @@ class historia extends Model
      //relacion uno a muchos
      public function tikets(){
         return $this->hasMany('App\Models\tiket');
+    }    
 
-}
+}   
+    

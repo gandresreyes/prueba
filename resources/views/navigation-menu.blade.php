@@ -15,6 +15,12 @@
                     <x-jet-nav-link href="{{ route('home') }}" :active="request()->routeIs('home')">
                         {{ __('Home') }}
                     </x-jet-nav-link>
+                    @auth
+                    <x-jet-nav-link href="{{ route('proyectos') }}" :active="request()->routeIs('proyectos')">
+                        {{ __('proyectos') }}
+                    </x-jet-nav-link>
+                    
+                @endauth
                 </div>
             </div>
 
@@ -122,8 +128,8 @@
                             </x-slot>
                         </x-jet-dropdown>
                     @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Log in</a>
-                        <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
+                        <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Iniciar Sesion</a>
+                        <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">registrarse</a>
                     @endauth
                 </div>
             </div>
@@ -146,6 +152,13 @@
             <x-jet-responsive-nav-link href="{{ route('home') }}" :active="request()->routeIs('home')">
                 {{ __('Home') }}
             </x-jet-responsive-nav-link>
+            @auth
+                <x-jet-responsive-nav-link href="{{ route('proyectos') }}" :active="request()->routeIs('proyectos')">
+                    {{ __('proyectos') }}
+                </x-jet-responsive-nav-link>
+                
+            @endauth
+            
         </div>
 
         <!-- Responsive Settings Options -->

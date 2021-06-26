@@ -20,6 +20,9 @@ class CreateProyectosTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
 
+            $table->unsignedBigInteger('id_empresa');
+            $table->foreign('id_empresa')->references('id')->on('empresas')->onDelete('cascade');
+
 
 
             $table->timestamps();

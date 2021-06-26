@@ -12,4 +12,8 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
-Route::get('proyectos',[ProyectoController::class, 'index'])->middleware('auth');
+Route::get('proyectos',[ProyectoController::class, 'index'])->middleware('auth')->name('proyectos');
+
+Route::get('proyectos/{proyecto}', function($proyecto){
+    return "aqui van las historias";
+})->name('proyectos.show');

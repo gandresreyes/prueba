@@ -16,4 +16,8 @@ class proyecto extends Model
         return $this->belongsTo('App\Models\User');
     }
 
+    public function empresa(){
+        return $this->belongsTo('App\Models\empresa');
+    }
+
 }

@@ -16,5 +16,8 @@ class empresa extends Model
     public function usuarios(){
         return $this->hasMany('App\Models\User');
     }
+    public function proyectos(){
+        return $this->hasMany('App\Models\proyecto');
+    }
 }
 
